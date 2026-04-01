@@ -36,6 +36,7 @@
             padding: 0 64px;
             justify-content: space-between;
             align-items: center;
+            border-bottom: 1px solid black;
         }
 
         header>img {
@@ -54,7 +55,7 @@
             width: 24px;
             height: 24px;
         }
-        .header-nav>nav>button {
+        .aside-nav>button {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -68,9 +69,13 @@
         }
 
         nav {
+            width: 10%;
+            height: 92.3vh;
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
+            border-right: 1px solid black;
             gap: 32px;
         }
 
@@ -89,6 +94,14 @@
             color: white;
         }
 
+        .aside-nav{
+            height: 30vh;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            
+        }
+
     </style>
 </head>
 
@@ -96,7 +109,15 @@
     <header>
         <img src="Assets/Imagens/companylogo.svg" alt="Logo">
         <div class="header-nav">
-            <nav>
+            <div class="btn-wrapper">
+                <button>Button</button>
+                <button class="btn-secondary">Button</button>
+            </div>
+        </div>
+    </header>
+    <aside>
+        <nav>
+            <div class="aside-nav">
                 <a href="">Link One</a>
                 <a href="">Link Two</a>
                 <a href="">Link Three</a>
@@ -104,13 +125,9 @@
                     <p>Link Four</p>
                     <img src="Assets/Imagens/chevrondown.svg" alt="Drop">
                 </button>
-            </nav>
-            <div class="btn-wrapper">
-                <button>Button</button>
-                <button class="btn-secondary">Button</button>
             </div>
-        </div>
-    </header>
+        </nav>
+    </aside>
 </body>
 
 </html>

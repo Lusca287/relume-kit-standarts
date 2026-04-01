@@ -41,6 +41,7 @@
         header>img {
             width: 80px;
             height: 40px;
+            margin-left: -20%;
         }
 
         .header-nav {
@@ -58,7 +59,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 4px;
+            gap: 16px;
             
             p{
                 font-size: 16px;
@@ -81,10 +82,6 @@
 
         .btn-wrapper>button{
             padding: 8px 20px;
-            border: 1px solid black;
-        }
-
-        .btn-secondary{
             background-color: #000;
             color: white;
         }
@@ -94,7 +91,6 @@
 
 <body>
     <header>
-        <img src="Assets/Imagens/companylogo.svg" alt="Logo">
         <div class="header-nav">
             <nav>
                 <a href="">Link One</a>
@@ -105,10 +101,10 @@
                     <img src="Assets/Imagens/chevrondown.svg" alt="Drop">
                 </button>
             </nav>
-            <div class="btn-wrapper">
-                <button>Button</button>
-                <button class="btn-secondary">Button</button>
-            </div>
+        </div>
+        <img src="Assets/Imagens/companylogo.svg" alt="Logo">
+        <div class="btn-wrapper">
+            <button>Button</button>
         </div>
     </header>
 </body>
