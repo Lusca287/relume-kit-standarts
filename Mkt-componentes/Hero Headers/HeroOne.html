@@ -27,11 +27,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
+
         }
 
         header{
             display: flex;
-            height: 67%;
+            height: 70%;
             width: 90%;
         }
 
@@ -65,11 +66,55 @@
             border: 1px solid black;
         }
 
-        .btn-secondary{
+
+
+        #btn-secondary{
             background-color: #000;
             color: white;
+
+            position: relative;
         }
 
+        .btn-wrapper>button:hover{
+            box-shadow: 0 0 22px #000000,
+                        0 0 44px #000000;
+        }
+
+        #btn-secondary::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgb(255, 255, 255); /* ou qualquer cor */
+    
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s ease;;
+        
+        }
+        #btn-secondary:hover::before{
+            transform: scaleX(1);
+        }
+
+
+
+        #btn-secondary>span {
+        position: relative;
+        z-index: 999;
+        }
+        #btn-secondary:hover >span{
+            color: #ff0000;
+        }
+
+        #third-b {
+        transition: transform 0.6s;
+        }
+
+        #third-b:hover {
+        transform: translateY(-2px) rotateX(360deg);
+        }
 
 
     </style>
@@ -86,11 +131,12 @@
                 erat.
             </p><br>
                 <div class="btn-wrapper">
-                    <button class="btn-secondary">Button</button>
-                    <button>Button</button>
+                    <button id="btn-secondary"><span>Button</span></button>
+                    <button><span>Button</span></button>
+                    <button id="third-b">Button</button>
                 </div>
         </aside>
-        <img width="47%" height="100%" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/aac39ffc-42e8-49fe-a1a1-9706baf7af0d/de8m9dv-a152d297-4241-4303-8834-eae2f4d8ba5a.jpg/v1/fill/w_894,h_894,q_70,strp/invincible_icon_by_thelivingethan_de8m9dv-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTY0NCIsInBhdGgiOiJcL2ZcL2FhYzM5ZmZjLTQyZTgtNDlmZS1hMWExLTk3MDZiYWY3YWYwZFwvZGU4bTlkdi1hMTUyZDI5Ny00MjQxLTQzMDMtODgzNC1lYWUyZjRkOGJhNWEuanBnIiwid2lkdGgiOiI8PTE2NDQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.dBmf_RZmpcu2CORGVGligqW_d6Ggb4weT72kQefQwMw" alt="Invencivel">
+        <img width="47%" height="100%" style="filter: grayscale(100%);" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/aac39ffc-42e8-49fe-a1a1-9706baf7af0d/de8m9dv-a152d297-4241-4303-8834-eae2f4d8ba5a.jpg/v1/fill/w_894,h_894,q_70,strp/invincible_icon_by_thelivingethan_de8m9dv-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTY0NCIsInBhdGgiOiJcL2ZcL2FhYzM5ZmZjLTQyZTgtNDlmZS1hMWExLTk3MDZiYWY3YWYwZFwvZGU4bTlkdi1hMTUyZDI5Ny00MjQxLTQzMDMtODgzNC1lYWUyZjRkOGJhNWEuanBnIiwid2lkdGgiOiI8PTE2NDQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.dBmf_RZmpcu2CORGVGligqW_d6Ggb4weT72kQefQwMw" alt="Invencivel">
     </header>
 
 </body>
